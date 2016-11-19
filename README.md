@@ -4,7 +4,7 @@ This project provides a starter kit for Drupal 7 projects hosted on Platform.sh.
 
 This example is based on using the Drush Make build profile.
 
-You can see there is not much in terms of files committed to this repository. You can learn (much) more on [Platform.sh Drupal Hosting Documentation](https://docs.platform.sh/user_guide/reference/toolstacks/php/drupal7/index.html)
+You can see there is not much in terms of files committed to this repository. You can learn (much) more on [Platform.sh Drupal Hosting Documentation](https://docs.platform.sh/frameworks/drupal7.html)
 
 
 ## Starting a new project
