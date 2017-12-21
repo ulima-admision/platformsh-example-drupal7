@@ -31,7 +31,7 @@ if (file_exists(__DIR__ . '/settings.platformsh.php')) {
 }
 
 // Include local settings. These come last so that they can override anything.
-$on_platformsh = !empty($_ENV['PLATFORM_PROJECT']);
+$on_platformsh = getenv('PLATFORM_PROJECT') !== FALSE;
 if (file_exists(__DIR__ . '/settings.local.php') && !$on_platformsh) {
   require_once(__DIR__ . '/settings.local.php');
 }
