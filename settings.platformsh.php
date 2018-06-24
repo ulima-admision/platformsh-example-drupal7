@@ -16,6 +16,8 @@ if (getenv('PLATFORM_RELATIONSHIPS')) {
           'password' => $instance['password'],
           'host' => $instance['host'],
           'port' => $instance['port'],
+          'charset' => 'utf8mb4',
+          'collation' => 'utf8mb4_general_ci',
         ];
         if (!empty($instance['query']['compression'])) {
           $database['pdo'][PDO::MYSQL_ATTR_COMPRESS] = TRUE;
