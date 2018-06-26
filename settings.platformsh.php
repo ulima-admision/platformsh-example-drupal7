@@ -16,6 +16,13 @@ if (getenv('PLATFORM_RELATIONSHIPS')) {
           'password' => $instance['password'],
           'host' => $instance['host'],
           'port' => $instance['port'],
+
+          // 4-byte UTF-8 support: this will work on new sites. Existing sites
+          // may need to back up and convert their database tables before
+          // including this configuration.
+          // See https://www.drupal.org/node/2754539
+          'charset' => 'utf8mb4',
+          'collation' => 'utf8mb4_general_ci',
         ];
         if (!empty($instance['query']['compression'])) {
           $database['pdo'][PDO::MYSQL_ATTR_COMPRESS] = TRUE;
